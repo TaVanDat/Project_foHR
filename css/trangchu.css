@@ -1,0 +1,101 @@
+*{
+	font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.head-top{
+	height: 30px;
+	text-align: center;
+	background-color: #F8F9F9;
+}
+.head-top p{
+	font-size: 13px;
+	font-weight: 300;
+	line-height: 30px;
+	color: #777777;
+}
+.head-bottom {
+	display: flex;
+	justify-content: space-between;
+}
+.head-bottom .logo{
+	padding-left: 50px;
+}
+
+.navbar{
+	padding-left: 100px;
+}
+
+ul{
+	list-style: none;
+}
+
+.menu a{
+	text-decoration: none;
+	color: black;
+}
+
+.menu ul{
+	position: absolute;
+	top: 42px;
+	left: 0;
+	display: none;
+}
+
+
+.menu li{
+	padding-left: 10px;
+	float: left;
+	line-height: 1.5em;
+	position: relative;
+	background: white;
+	padding: 10px;
+}
+a:hover{color: chocolate;}
+.menu li:hover{
+	background: white;
+	cursor: pointer;
+	
+	
+}
+
+.menu ul li{
+	border: 1px solid #d7dbdd;
+}
+
+.menu ul ul{
+	left: 175px;
+	top: 0px;
+}
+
+.menu ul ul li{
+	border: 1px solid #d7dbdd;
+}
+
+.menu .menu-1>li{width:11rem;}
+.menu-sub-1 li{
+	width: 150px;
+}
+
+.menu-sub-2 li{
+	width: 250px;
+}
+
+.icon ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+}
+
+.icon ul li a{
+	padding: 17px 18px;
+	display: block;
+	font-size:30px;
+	color: black;
+}
+
+.icon ul li:hover{
+	cursor: pointer;
+}
