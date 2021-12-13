@@ -26,47 +26,34 @@ document.addEventListener("DOMContentLoaded",()=>{
     };
     // object back img
     var changImg = {
-        img1:"../images/AoSoMi/mslandslimfit14155.jpg",
-        img2:"../images/AoSoMi/Britishclassics14266.jpg",
-
-        
+        img1:"../images/imageBack/aosomi/mslandslimfit1415.jpg",
+        img2:"../images/imageBack/aosomi/Britishclassics1426.jpg"
     };
-    // create class have attr position
     
+    //create function setAttribute 
+    function setAttr(imgArr,imgIndex){
+        return imgArr.setAttribute('src',imgIndex);
+    }
     // process hover change img
     for (let i = 0; i < arrImg.length; i++) {
         arrImg[i].onmouseover = () => {
-            if (arrImg[i].getAttribute('src')==backImg.img1) {
-                arrImg[i].setAttribute('src',changImg.img1);
+            for (const key in changImg) {
+                if (arrImg[i].getAttribute('src').slice(-20)==changImg[key].slice(-20)) //compare 20 last string 
+                {
+                    setAttr(arrImg[i], changImg[key]);
+                }
             }
-            else if (arrImg[i].getAttribute('src')==backImg.img2) {
-                arrImg[i].setAttribute('src',changImg.img2);
-            }
-            
         };
         arrImg[i].onmouseout = () => {
-            if (arrImg[i].getAttribute('src')==changImg.img1) {
-                arrImg[i].setAttribute('src',backImg.img1);
-            }
-            if (arrImg[i].getAttribute('src')==changImg.img2) {
-                arrImg[i].setAttribute('src',backImg.img2);
+            for (const key in backImg) {
+                if (arrImg[i].getAttribute('src').slice(-20)==backImg[key].slice(-20)) {
+                    setAttr(arrImg[i], backImg[key]);
+                }
             }
 
         };
         
     }
 });
-
-
-// function changeImg(x){
-//     x.src = "../images/AoSoMi/mslandslimfit14155.jpg";
-//     x.style.height ='250px';
-//     x.style.width = '230px';
-// }
-// function backImg(x){
-//     x.src = "../images/AoSoMi/mslandslimfit1415.jpg";
-//     x.style.height ='250px';
-//     x.style.width = '230px';
-// }
 
 
